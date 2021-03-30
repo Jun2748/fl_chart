@@ -98,6 +98,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
             strokeWidth: 2,
             dashArray: [5, 10],
             label: HorizontalLineLabel(
+              show: true,
               alignment: Alignment.topRight,
               padding: const EdgeInsets.only(right: 5, bottom: 5),
               style: const TextStyle(color: Colors.black, fontSize: 9),
@@ -107,11 +108,12 @@ class _LineChartSample8State extends State<LineChartSample8> {
         ],
         verticalLines: [
           VerticalLine(
-            x: 5.5,
+            x: 5.7,
             color: const Color.fromRGBO(197, 210, 214, 1),
             strokeWidth: 2,
             dashArray: [5, 10],
             label: VerticalLineLabel(
+              show: true,
               alignment: Alignment.topRight,
               padding: const EdgeInsets.only(left: 10, top: 5),
               style: const TextStyle(color: Colors.black, fontSize: 9),
@@ -132,14 +134,15 @@ class _LineChartSample8State extends State<LineChartSample8> {
         bottomTitles: SideTitles(
           showTitles: true,
           reservedSize: 22,
-          textStyle: TextStyle(color: Colors.black87, fontSize: 10),
-          interval: 2,
+          getTextStyles: (value) => const TextStyle(color: Colors.black87, fontSize: 10),
+          interval: 4,
           margin: 8,
+          checkToShowTitle: (minValue, maxValue, sideTitles, appliedInterval, value) => true,
         ),
         leftTitles: SideTitles(
           interval: 2,
           showTitles: true,
-          textStyle: TextStyle(
+          getTextStyles: (value) => const TextStyle(
             color: Colors.black87,
             fontSize: 10,
           ),
@@ -153,7 +156,9 @@ class _LineChartSample8State extends State<LineChartSample8> {
           return spotIndexes.map((spotIndex) {
             return TouchedSpotIndicatorData(
               FlLine(color: Colors.orange, strokeWidth: 3),
-              FlDotData(dotSize: 8, getDotColor: (spot, percent, barData) => Colors.deepOrange),
+              FlDotData(
+                  getDotPainter: (spot, percent, barData, index) =>
+                      FlDotCirclePainter(radius: 8, color: Colors.deepOrange)),
             );
           }).toList();
         },
@@ -175,7 +180,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
             FlSpot(4.9, 5),
             FlSpot(6.8, 5),
             FlSpot(7.5, 4),
-            FlSpot(null, null),
+            FlSpot.nullSpot,
             FlSpot(7.5, 2),
             FlSpot(8, 1),
             FlSpot(10, 2),

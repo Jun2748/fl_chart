@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+
 import '../data_pool.dart';
 
 void main() {
@@ -44,12 +45,6 @@ void main() {
 
     test('FlDotData equality test', () {
       expect(flDotData1 == flDotData1Clone, true);
-
-      expect(flDotData1 == flDotData2, false);
-
-      expect(flDotData1 == flDotData2, false);
-
-      expect(flDotData1 == flDotData3, false);
 
       expect(flDotData1 == flDotData4, false);
 
@@ -100,13 +95,6 @@ void main() {
       expect(verticalLineLabel1 == verticalLineLabel5, false);
       expect(verticalLineLabel1 == verticalLineLabel6, false);
       expect(verticalLineLabel1 == verticalLineLabel7, false);
-    });
-
-    test('SizedPicture equality test', () {
-      expect(sizedPicture1 == sizedPicture1Clone, true);
-      expect(sizedPicture1 == sizedPicture2, false);
-      expect(sizedPicture1 == sizedPicture3, false);
-      expect(sizedPicture1 == sizedPicture4, false);
     });
 
     test('ExtraLinesData equality test', () {
@@ -167,7 +155,7 @@ void main() {
     });
 
     test('LineTouchResponse equality test', () {
-      expect(lineTouchResponse1 == lineTouchResponse1Clone, true);
+      expect(lineTouchResponse1 == lineTouchResponse1Clone, false);
       expect(lineTouchResponse1 == lineTouchResponse2, false);
       expect(lineTouchResponse1 == lineTouchResponse3, false);
       expect(lineTouchResponse1 == lineTouchResponse4, false);

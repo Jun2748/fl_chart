@@ -64,7 +64,9 @@ class LineChartSample9 extends StatelessWidget {
                     return TouchedSpotIndicatorData(
                       FlLine(color: Colors.orange, strokeWidth: 3),
                       FlDotData(
-                          dotSize: 8, getDotColor: (spot, percent, barData) => Colors.deepOrange),
+                        getDotPainter: (spot, percent, barData, index) =>
+                            FlDotCirclePainter(radius: 8, color: Colors.deepOrange),
+                      ),
                     );
                   }).toList();
                 },
@@ -89,8 +91,8 @@ class LineChartSample9 extends StatelessWidget {
                   ),
                   dotData: FlDotData(
                     show: true,
-                    getDotColor: (spot, percent, barData) => Colors.deepOrange.withOpacity(0.5),
-                    dotSize: 12,
+                    getDotPainter: (spot, percent, barData, index) =>
+                        FlDotCirclePainter(radius: 8, color: Colors.deepOrange),
                   ),
                 ),
                 LineChartBarData(
@@ -107,8 +109,8 @@ class LineChartSample9 extends StatelessWidget {
                   ),
                   dotData: FlDotData(
                     show: true,
-                    getDotColor: (spot, percent, barData) => Colors.blue.withOpacity(0.5),
-                    dotSize: 12,
+                    getDotPainter: (spot, percent, barData, index) =>
+                        FlDotCirclePainter(radius: 8, color: Colors.blue),
                   ),
                 ),
               ],
@@ -120,7 +122,7 @@ class LineChartSample9 extends StatelessWidget {
                   getTitles: (double value) {
                     return value.toInt().toString();
                   },
-                  textStyle: const TextStyle(
+                  getTextStyles: (value) => const TextStyle(
                       color: Colors.deepOrange, fontWeight: FontWeight.bold, fontSize: 18),
                   margin: 16,
                 ),
@@ -131,7 +133,7 @@ class LineChartSample9 extends StatelessWidget {
                   getTitles: (double value) {
                     return value.toInt().toString();
                   },
-                  textStyle: const TextStyle(
+                  getTextStyles: (value) => const TextStyle(
                       color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 18),
                   margin: 16,
                 ),
@@ -140,7 +142,7 @@ class LineChartSample9 extends StatelessWidget {
                   getTitles: (double value) {
                     return value.toInt().toString();
                   },
-                  textStyle: const TextStyle(
+                  getTextStyles: (value) => const TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
                   margin: 16,
                 ),

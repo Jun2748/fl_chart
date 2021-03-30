@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+
 import '../data_pool.dart';
 
 void main() {
@@ -37,7 +38,8 @@ void main() {
                 ScatterSpot(1, 2, show: false, radius: 11, color: Colors.white),
               ]),
           false);
-      expect(scatterChartData1 == scatterChartData1Clone.copyWith(clipToBorder: true), false);
+      expect(
+          scatterChartData1 == scatterChartData1Clone.copyWith(clipData: FlClipData.all()), false);
       expect(
           scatterChartData1 ==
               scatterChartData1Clone.copyWith(
@@ -92,7 +94,7 @@ void main() {
                 show: true,
                 leftTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.red, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.red, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 22,
                   margin: 11,
@@ -100,7 +102,7 @@ void main() {
                 ),
                 bottomTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.grey, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.grey, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 11,
                   margin: 11,
@@ -108,7 +110,7 @@ void main() {
                 ),
                 rightTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.blue, fontSize: 11),
+                  textStyle: const TextStyle(color: Colors.blue, fontSize: 11),
                   textAlign: TextAlign.left,
                   reservedSize: 2,
                   margin: 1324,
@@ -116,7 +118,7 @@ void main() {
                 ),
                 topTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.green, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.green, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 23,
                   margin: 11,
@@ -131,7 +133,7 @@ void main() {
                 show: true,
                 leftTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.red, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.red, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 21,
                   margin: 11,
@@ -139,7 +141,7 @@ void main() {
                 ),
                 bottomTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.grey, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.grey, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 11,
                   margin: 11,
@@ -147,7 +149,7 @@ void main() {
                 ),
                 rightTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.blue, fontSize: 11),
+                  textStyle: const TextStyle(color: Colors.blue, fontSize: 11),
                   textAlign: TextAlign.left,
                   reservedSize: 2,
                   margin: 1324,
@@ -155,7 +157,7 @@ void main() {
                 ),
                 topTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.green, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.green, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 23,
                   margin: 11,
@@ -170,7 +172,7 @@ void main() {
                 show: true,
                 leftTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.red, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.red, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 22,
                   margin: 11,
@@ -178,7 +180,7 @@ void main() {
                 ),
                 bottomTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.grey, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.grey, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 11,
                   margin: 11,
@@ -186,7 +188,7 @@ void main() {
                 ),
                 rightTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.blue, fontSize: 11),
+                  textStyle: const TextStyle(color: Colors.blue, fontSize: 11),
                   textAlign: TextAlign.left,
                   reservedSize: 2,
                   margin: 1324,
@@ -194,7 +196,7 @@ void main() {
                 ),
                 topTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.green, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.green, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 23,
                   margin: 11,
@@ -209,7 +211,7 @@ void main() {
                 show: true,
                 leftTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.red, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.red, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 22,
                   margin: 11,
@@ -217,7 +219,7 @@ void main() {
                 ),
                 bottomTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.grey, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.grey, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 11,
                   margin: 11,
@@ -225,7 +227,7 @@ void main() {
                 ),
                 rightTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.blue, fontSize: 11),
+                  textStyle: const TextStyle(color: Colors.blue, fontSize: 11),
                   textAlign: TextAlign.right,
                   reservedSize: 2,
                   margin: 1324,
@@ -233,7 +235,7 @@ void main() {
                 ),
                 topTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.green, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.green, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 23,
                   margin: 11,
@@ -248,7 +250,7 @@ void main() {
                 show: true,
                 leftTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.red, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.red, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 22,
                   margin: 11,
@@ -256,7 +258,7 @@ void main() {
                 ),
                 bottomTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.grey, fontSize: 33),
+                  textStyle: const TextStyle(color: Colors.grey, fontSize: 33),
                   textAlign: TextAlign.left,
                   reservedSize: 11,
                   margin: 11,
@@ -264,7 +266,7 @@ void main() {
                 ),
                 rightTitle: AxisTitle(
                   showTitle: false,
-                  textStyle: TextStyle(color: Colors.blue, fontSize: 11),
+                  textStyle: const TextStyle(color: Colors.blue, fontSize: 11),
                   textAlign: TextAlign.left,
                   reservedSize: 2,
                   margin: 1324,
@@ -272,7 +274,7 @@ void main() {
                 ),
                 topTitle: AxisTitle(
                   showTitle: true,
-                  textStyle: TextStyle(color: Colors.green, fontSize: 33.5),
+                  textStyle: const TextStyle(color: Colors.green, fontSize: 33.5),
                   textAlign: TextAlign.left,
                   reservedSize: 23,
                   margin: 11,
@@ -349,41 +351,6 @@ void main() {
           false);
     });
 
-    test('ScatterTouchResponse equality test', () {
-      final ScatterTouchResponse sample1 = ScatterTouchResponse(
-        FlPanStart(const Offset(0, 0)),
-        ScatterSpot(3, 4),
-        1,
-      );
-      final ScatterTouchResponse sample2 = ScatterTouchResponse(
-        FlPanStart(const Offset(0, 0)),
-        ScatterSpot(3, 4),
-        1,
-      );
-      expect(sample1 == sample2, true);
-
-      ScatterTouchResponse sampleChanged = ScatterTouchResponse(
-        FlPanStart(const Offset(0, 3)),
-        ScatterSpot(3, 4),
-        1,
-      );
-      expect(sample1 == sampleChanged, false);
-
-      sampleChanged = ScatterTouchResponse(
-        FlPanStart(const Offset(0, 0)),
-        ScatterSpot(0, 4),
-        1,
-      );
-      expect(sample1 == sampleChanged, false);
-
-      sampleChanged = ScatterTouchResponse(
-        FlPanStart(const Offset(0, 0)),
-        ScatterSpot(3, 4),
-        5,
-      );
-      expect(sample1 == sampleChanged, false);
-    });
-
     test('ScatterTouchTooltipData equality test', () {
       final ScatterTouchTooltipData sample1 = ScatterTouchTooltipData(
         tooltipRoundedRadius: 23,
@@ -409,33 +376,33 @@ void main() {
     test('ScatterTooltipItem equality test', () {
       final ScatterTooltipItem sample1 = ScatterTooltipItem(
         'aa',
-        TextStyle(color: Colors.red),
+        const TextStyle(color: Colors.red),
         23,
       );
       final ScatterTooltipItem sample2 = ScatterTooltipItem(
         'aa',
-        TextStyle(color: Colors.red),
+        const TextStyle(color: Colors.red),
         23,
       );
       expect(sample1 == sample2, true);
 
       ScatterTooltipItem changed = ScatterTooltipItem(
         'a3a',
-        TextStyle(color: Colors.red),
+        const TextStyle(color: Colors.red),
         23,
       );
       expect(sample1 == changed, false);
 
       changed = ScatterTooltipItem(
         'aa',
-        TextStyle(color: Colors.green),
+        const TextStyle(color: Colors.green),
         23,
       );
       expect(sample1 == changed, false);
 
       changed = ScatterTooltipItem(
         'aa',
-        TextStyle(color: Colors.red),
+        const TextStyle(color: Colors.red),
         0,
       );
       expect(sample1 == changed, false);

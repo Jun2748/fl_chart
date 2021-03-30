@@ -89,8 +89,8 @@ class LineChartSample6 extends StatelessWidget {
                     ),
                     dotData: FlDotData(
                       show: true,
-                      getDotColor: (spot, percent, barData) => Colors.deepOrange.withOpacity(0.5),
-                      dotSize: 12,
+                      getDotPainter: (spot, percent, barData, index) =>
+                          FlDotCirclePainter(radius: 12, color: Colors.deepOrange.withOpacity(0.5)),
                     ),
                   ),
                   LineChartBarData(
@@ -107,8 +107,8 @@ class LineChartSample6 extends StatelessWidget {
                     ),
                     dotData: FlDotData(
                       show: true,
-                      getDotColor: (spot, percent, barData) => Colors.blue.withOpacity(0.5),
-                      dotSize: 12,
+                      getDotPainter: (spot, percent, barData, index) =>
+                          FlDotCirclePainter(radius: 12, color: Colors.blue.withOpacity(0.5)),
                     ),
                   ),
                 ],
@@ -126,7 +126,7 @@ class LineChartSample6 extends StatelessWidget {
 
                       return intValue.toString();
                     },
-                    textStyle: const TextStyle(
+                    getTextStyles: (value) => const TextStyle(
                         color: Colors.deepOrange, fontWeight: FontWeight.bold, fontSize: 18),
                     margin: 16,
                   ),
@@ -142,7 +142,7 @@ class LineChartSample6 extends StatelessWidget {
 
                       return intValue.toString();
                     },
-                    textStyle: const TextStyle(
+                    getTextStyles: (value) => const TextStyle(
                         color: Colors.blue, fontWeight: FontWeight.bold, fontSize: 18),
                     margin: 16,
                   ),
@@ -151,7 +151,8 @@ class LineChartSample6 extends StatelessWidget {
                     showTitles: true,
                     reservedSize: 28,
                     margin: 8,
-                    textStyle: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                    getTextStyles: (value) =>
+                        const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                     getTitles: (double value) {
                       return value.toInt().toString();
                     },
