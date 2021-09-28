@@ -373,7 +373,7 @@ abstract class AxisChartPainter<D extends AxisChartData> extends BaseChartPainte
       return chartUsableSize.height + getTopOffsetDrawSize(holder);
     }
 
-    var y = ((spotY - data.minY) / deltaY) * chartUsableSize.height;
+    var y = ((spotY - _minY) / deltaY) * chartUsableSize.height;
     y = chartUsableSize.height - y;
     return y + getTopOffsetDrawSize(holder);
   }
