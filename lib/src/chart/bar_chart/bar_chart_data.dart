@@ -131,7 +131,7 @@ class BarChartData extends AxisChartData with EquatableMixin {
         gridData: FlGridData.lerp(a.gridData, b.gridData, t),
         borderData: FlBorderData.lerp(a.borderData, b.borderData, t),
         minX: lerpDouble(a.minX, b.minX, t),
-        maxX: learpDouble(a.maxX, b.maxX, t),
+        maxX: lerpDouble(a.maxX, b.maxX, t),
         minY: lerpDouble(a.minY, b.minY, t),
         maxY: lerpDouble(a.maxY, b.maxY, t),
         backgroundColor: Color.lerp(a.backgroundColor, b.backgroundColor, t),
