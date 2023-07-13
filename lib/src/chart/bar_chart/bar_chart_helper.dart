@@ -28,15 +28,14 @@ class BarChartHelper {
         throw Exception('barRods could not be null or empty');
       }
     }
-    var minX = 0.0;
+    var minX = barGroups[0].x.toDouble();
     var maxX = barGroups[0].x.toDouble();
-    var minY = 0.0;
+    var minY = barGroups[0].barRods[0].y;
     var maxY = barGroups[0].barRods[0].y;
 
     for (var i = 0; i < barGroups.length; i++) {
       final barGroup = barGroups[i];
       final xInDouble = barGroup.x.toDouble();
-
       if (xInDouble > maxX) {
         maxX = xInDouble;
       }
