@@ -28,7 +28,7 @@ class BarChartHelper {
         throw Exception('barRods could not be null or empty');
       }
     }
-    var minX = barGroups[0].x.toDouble();
+    var minX = 0.0;
     var maxX = barGroups[0].x.toDouble();
     var minY = 0.0;
     var maxY = barGroups[0].barRods[0].y;
@@ -82,7 +82,7 @@ class BarChartMinMaxAxisValues with EquatableMixin {
       {this.readFromCache = false});
 
   @override
-  List<Object?> get props => [minY, maxY, readFromCache];
+  List<Object?> get props => [minX, maxX, minY, maxY, readFromCache];
 
   BarChartMinMaxAxisValues copyWith(
       {double? minX, double? maxX, double? minY, double? maxY, bool? readFromCache}) {
